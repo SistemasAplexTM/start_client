@@ -1,0 +1,16 @@
+{
+  "logout": "Salir",
+  "login": "Entrar",
+  "profile": "Perfil",
+  "message": {
+    "hello": "Hola mundo"
+  },
+  "languages": {
+    "english": "Inglés",
+    "spanish": "Español"
+  },
+  "menu": {
+    "home": "Inicio",
+    "profile": "Perfil"
+  }
+}

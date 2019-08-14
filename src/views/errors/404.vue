@@ -1,5 +1,5 @@
 <template>
-	<div class="not-found">
+	<div class="not-found scrollable ">
 		<div class="msg-box">
 			<h1 class="animated fadeInDown">404 Not Found</h1>
 			<h2 class="animated fadeInUp">
@@ -10,8 +10,17 @@
 </template>
 
 <script>
+
 export default {
-	name: 'NotFound'
+	name: 'NotFound',
+	data () {
+		return {
+
+		}
+	},
+	methods: {
+
+	}
 }
 </script>
 

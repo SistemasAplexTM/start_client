@@ -12,6 +12,19 @@ export function login (username, password, remember) {
   })
 }
 
+export function register (name, username, password, password_confirmation) {
+  return request({
+    url: '/auth/signup',
+    method: 'post',
+    data: {
+      name,
+      email: username,
+      password,
+      password_confirmation
+    }
+  })
+}
+
 export function user () {
   return request({
     url: '/user',

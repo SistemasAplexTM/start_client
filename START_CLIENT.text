@@ -1,0 +1,23 @@
+Este es un proyecto base que nos servirá de punto de partida para los próximos desarrollos.
+
+Caracteristicas:
+1. Integración con i18n para traducción en archivos independientes por idioma
+2. Sistema personalizado de redirección según el rol del usuario
+3. Sistema de permisos basado en la directiva personalizada v-can
+4.
+
+
+Pendiente:
+1. Diseño de páginas 404, 401
+2. Registro de usuario
+3. Formulario de roles y permisos
+4. Menú en la BD
+5. Barra lateral ¡IMPORTANTE! (spa tipo cell dentro de la barra)
+6. Notificaciones
+7. Idiomas en la BD
+
+
+SERVIDOR
+1. Request para validación de formularios y mensajes personalizados
+2. Laravel permissions para manejo de roles y permissions
+3. Laravel passport para manejo de seguridad del API

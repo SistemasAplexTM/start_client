@@ -7,7 +7,9 @@
 
 			<img class="logo-mini" src="@/assets/images/logo.png" alt="logo"/>
 
-			<search class="hidden-xs-only"></search>
+			<!-- Buscador global disponible -->
+			<!-- <search class="hidden-xs-only"></search> -->
+			
 		</div>
 		<div class="box-right flex align-center pl-10">
 			<el-dropdown trigger="click" @command="onCommandLang">
@@ -15,14 +17,9 @@
 					<i class="flag-icon" :class="{['flag-icon-'+lang]:true}"></i>
 				</span>
 				<el-dropdown-menu slot="dropdown">
-					<el-dropdown-item command="us"><i class="flag-icon flag-icon-us mr-15"></i>English</el-dropdown-item>
-					<el-dropdown-item command="it"><i class="flag-icon flag-icon-it mr-15"></i>Italian</el-dropdown-item>
-					<el-dropdown-item command="fr"><i class="flag-icon flag-icon-fr mr-15"></i>French</el-dropdown-item>
-					<el-dropdown-item command="de"><i class="flag-icon flag-icon-de mr-15"></i>German</el-dropdown-item>
-					<el-dropdown-item command="es"><i class="flag-icon flag-icon-es mr-15"></i>Spanish</el-dropdown-item>
-					<el-dropdown-item command="cn"><i class="flag-icon flag-icon-cn mr-15"></i>Chinese</el-dropdown-item>
-					<el-dropdown-item command="jp"><i class="flag-icon flag-icon-jp mr-15"></i>Japanese</el-dropdown-item>
-					<el-dropdown-item command="/multi-language"><i class="fal fa-language mr-15"></i>Read the docs</el-dropdown-item>
+					<el-dropdown-item command="us"><i class="flag-icon flag-icon-us mr-15"></i>{{	$t('languages.english') }}</el-dropdown-item>
+					<el-dropdown-item command="es"><i class="flag-icon flag-icon-es mr-15"></i>{{ $t('languages.spanish') }}</el-dropdown-item>
+					<!-- <el-dropdown-item command="/multi-language"><i class="fal fa-language mr-15"></i>Read the docs</el-dropdown-item> -->
 				</el-dropdown-menu>
 			</el-dropdown>
 			<button class="fullscreen-button" @click="toggleFullscreen">
@@ -35,14 +32,14 @@
 			<el-badge :is-dot="true" class="notification-icon-badge">
 				<el-button v-popover:popover icon="fal fa-bell" class="notification-icon"></el-button>
 			</el-badge>
-			<span class="username"><router-link to="/profile">Aurora Shenton</router-link></span>
+			<span class="username"><router-link to="/profile">Administrador</router-link></span>
 			<el-dropdown trigger="click" @command="onCommand">
 				<span class="el-dropdown-link">
 					<img src="../assets/images/avatar.jpg" class="avatar" alt="avatar">
 				</span>
 				<el-dropdown-menu slot="dropdown">
-					<el-dropdown-item command="/profile"><i class="fal fa-user mr-10"></i> Profile</el-dropdown-item>
-					<el-dropdown-item command="/logout" divided><i class="fal fa-sign-out mr-10"></i> Logout</el-dropdown-item>
+					<el-dropdown-item command="/profile"><i class="fal fa-user mr-10"></i> {{ $t('profile') }}</el-dropdown-item>
+					<el-dropdown-item command="/logout" divided><i class="fal fa-sign-out mr-10"></i> {{ $t('logout') }}</el-dropdown-item>
 				</el-dropdown-menu>
 			</el-dropdown>
 
@@ -64,12 +61,17 @@ export default {
     return {
       popoverWidth: 300,
       fullscreen: false,
-      lang: 'us'
+      lang: 'es'
     }
   },
   methods: {
     onCommandLang (lang) {
-      if (lang.charAt(0) === '/') { this.onCommand(lang) } else { this.lang = lang }
+      if (lang.charAt(0) === '/') {
+				this.onCommand(lang)
+			} else {
+				this.$i18n.locale = lang
+				this.lang = lang
+			}
     },
     onCommand (path) {
       this.$router.push(path)

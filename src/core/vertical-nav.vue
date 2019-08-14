@@ -52,7 +52,7 @@ export default {
 .vertical-nav {
 	//width: 230px;
 	height: 100%;
-	padding: 10px 20px;
+	padding: 10px 10px;
 	box-sizing: border-box;
 	transition: width .5s;
 
@@ -63,7 +63,7 @@ export default {
 	}
 
 	.sidebar {
-		width: 230px;
+		width: 200px;
 		height: 100%;
 		transition: width .5s;
 

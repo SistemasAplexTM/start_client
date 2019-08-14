@@ -1,3 +1,6 @@
+import { get } from '@/api/routes'
+var dataR = get()
+console.log(dataR);
 import { removeToken, removeUser, getToken, getUser } from '@/utils/auth'
 import Vue from 'vue'
 import Router from 'vue-router'
@@ -8,6 +11,7 @@ import Dashboard from '@/views/apps/Dashboard.vue'
 // pages
 import Login from '@/views/authentication/Login.vue'
 import ForgotPassword from '@/views/authentication/ForgotPassword.vue'
+import Profile from '@/views/pages/Profile.vue'
 
 // modules routes
 import errors from './modules/errors'
@@ -17,31 +21,36 @@ import store from '@/store'
 
 Vue.use(Router)
 
-
-// for (var i = 0; i < RoutesBD.length; i++) {
-// 	RoutesBD[i].component = view(RoutesBD[i].component)
-// 	// RoutesBD[i].meta = JSON.parse(RoutesBD[i].meta)
-//   RoutesBD[i].meta.layout = layouts[RoutesBD[i].meta.layout]
-// }
-
 const router = new Router({
   mode: 'history',
-  routes:
-  [
+  routes: [
 		{
 			path: '/',
       redirect: { path: '/home' }
 		},
+		// {
+		// 	path: '/home',
+		// 	name: 'Inicio',
+		// 	component: Dashboard,
+		// 	meta: {
+		// 		lang: 'menu.home',
+		// 		nav: true,
+		// 		auth: true,
+		// 		icon: 'home',
+		// 		roles: ['admin', 'guest'],
+		// 		layout: layouts.navLeft
+		// 	}
+		// },
 		{
-			path: '/home',
-			name: 'Inicio',
-			component: Dashboard,
+			path: '/test',
+			name: 'Prueba',
+			component: Profile,
 			meta: {
-				lang: 'menu.home',
+				lang: 'menu.profile',
 				nav: true,
 				auth: true,
-				icon: 'home',
-				roles: ['admin', 'guest'],
+				icon: 'user',
+				roles: ['guest'],
 				layout: layouts.navLeft
 			}
 		},

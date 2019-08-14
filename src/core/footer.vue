@@ -1,11 +1,8 @@
 <template>
 	<div class="footer flex align-center justify-space-between" :class="{'above':position === 'above'}">
-		<div><a href="https://pragmatic.ddmweb.it/docs/#/" target="_blank"><span class="hidden-xs-only">Documentation</span><span class="hidden-sm-and-up">Docs.</span></a></div>
+		<!-- <div><a href="https://aplicacionesexcel.com" target="_blank">AplexTM</a></div> -->
 		<div>
-			<span>Made by <a href="https://ddmweb.it" target="_blank">Linko</a></span>
-			<a class="el-button buy-btn animated fadeInRight el-button--default el-button--small is-plain" href="https://1.envato.market/BkJGL?ref=Linko91&utm_source=pragmaticdemo" target="_blank">
-				<i class="mdi mdi-cart"></i> Purchase <span class="hidden-xs-only">Pragmatic</span>
-			</a>
+			<span><a href="https://aplicacionesexcel.com" target="_blank">AplexTM</a></span>
 		</div>
 	</div>
 </template>

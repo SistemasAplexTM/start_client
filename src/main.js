@@ -36,7 +36,7 @@ import Affix from './directives/affix'
 import App from './App.vue'
 import router from './router/'
 import store from './store'
-import i18n_messages from './i18n.json'
+// import i18n_messages from './i18n.json'
 
 Vue.config.productionTip = false
 
@@ -57,7 +57,13 @@ Vue.use(Vuebar)
 Vue.component('vue-scroll', VuePerfectScrollbar)
 Vue.directive('affix', Affix)
 
-const i18n = new VueI18n({ locale: 'es', messages: i18n_messages })
+/* ═ ═ ═ ═ ═ ═ ═ ═ *\
+|  CUSTOM           |
+\* ═ ═ ═ ═ ═ ═ ═ ═ */
+import { languages, defaultLocale } from './lang/index.js'
+const messages = Object.assign(languages)
+
+const i18n = new VueI18n({ locale: defaultLocale, messages: messages })
 
 new Vue({
   i18n,

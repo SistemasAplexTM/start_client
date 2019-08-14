@@ -1,0 +1,16 @@
+{
+  "logout": "Logout",
+  "login": "Login",
+  "profile": "Profile",
+	"message": {
+		"hello": "Hello world"
+	},
+	"languages": {
+		"english": "English",
+		"spanish": "Spanish"
+	},
+  "menu": {
+    "home": "Home",
+    "profile": "Profile"
+  }
+}

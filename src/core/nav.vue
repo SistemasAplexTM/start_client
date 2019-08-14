@@ -12,17 +12,17 @@
 		<template v-for="item in items" v-if="showItem(item)">
 			<el-submenu v-if="item.children" index="authentication" popper-class="main-navigation-submenu">
 				<template slot="title">
-					<i :class="'icon-menu fal fa-' + item.meta.icon"></i><span>{{ item.name }}</span>
+					<i :class="'icon-menu fal fa-' + item.meta.icon"></i><span>{{ $t(item.meta.lang) }}</span>
 				</template>
 				<el-menu-item v-for="subItem in item.children" :key="subItem.path" v-if="showItem(subItem)" :index="subItem.path">
 					<span slot="title">
 						<i :class="'icon-menu fal fa-' + subItem.meta.icon"></i>
-						{{ subItem.name }}
+						{{ subItem.meta.lang }}
 					</span>
 				</el-menu-item>
 			</el-submenu>
 			<el-menu-item v-else :index="item.path">
-				<i :class="'icon-menu fal fa-' + item.meta.icon"></i><span slot="title">{{ item.name }}</span>
+				<i :class="'icon-menu fal fa-' + item.meta.icon"></i><span slot="title">{{ $t(item.meta.lang) }}</span>
 			</el-menu-item>
 		</template>
 	</el-menu>
@@ -31,6 +31,7 @@
 <script>
 import { getUser } from '@/utils/auth'
 import { detect } from 'detect-browser'
+
 const browser = detect()
 
 export default {
@@ -55,7 +56,7 @@ export default {
 			let res = false
 			if (roles) {
 				for (var i = 0; i < roles.length; i++) {
-					if (data.includes(roles[i].guard_name)) {
+					if (data.includes(roles[i].short_name)) {
 						res = true;
 					}
 				}
