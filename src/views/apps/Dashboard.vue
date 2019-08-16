@@ -1,8 +1,10 @@
 <template>
 	<vue-scroll class="page-dashboard">
-
-		{{ $t('message.hello') }}
-
+		<h1>
+			{{ $t('message.hello') }}
+		</h1>
+		<br>
+		<button type="button" name="button" @click="$store.commit('openRightMenu', {active: true, component: 'dashboard', title:  $t('menu.home'), icon: 'home'})">ABRIR</button>
 	</vue-scroll>
 </template>
 
@@ -13,7 +15,9 @@
 export default {
   name: 'Dashboard',
   data () {
-    return {}
+    return {
+
+		}
   },
   computed: {},
   methods: {
@@ -39,9 +43,6 @@ export default {
 		// 	}
 		// }
 	},
-  mounted () {},
-  beforeDestroy () {},
-  components: {}
 }
 </script>
 

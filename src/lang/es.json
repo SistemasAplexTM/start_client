@@ -2,6 +2,29 @@
   "logout": "Salir",
   "login": "Entrar",
   "profile": "Perfil",
+  "activity": "Actividad",
+  "information": "Información",
+  "success": {
+    "update": "Actualizado con éxito",
+    "save": "Guardado con éxito",
+    "delete": "Eliminado con éxito"
+  },
+  "errors": {
+    "update": "Error al intentar actualizar",
+    "save": "Error al intentar guardar",
+    "delete": "Error al intentar eliminar"
+  },
+  "global": {
+    "cancel": "Cancelar",
+    "acept": "Aceptar",
+    "save": "Guardar",
+    "update": "Actualizar",
+    "delete": "Eliminar"
+  },
+  "user": {
+    "name": "Nombre",
+    "email": "Correo"
+  },
   "message": {
     "hello": "Hola mundo"
   },

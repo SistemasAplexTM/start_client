@@ -6,6 +6,7 @@ import Router from 'vue-router'
 import Dashboard from '@/views/apps/Dashboard.vue'
 
 // pages
+import Profile from '@/views/pages/profile/Index.vue'
 import Login from '@/views/authentication/Login.vue'
 import ForgotPassword from '@/views/authentication/ForgotPassword.vue'
 
@@ -16,13 +17,6 @@ import layouts from '@/layout'
 import store from '@/store'
 
 Vue.use(Router)
-
-
-// for (var i = 0; i < RoutesBD.length; i++) {
-// 	RoutesBD[i].component = view(RoutesBD[i].component)
-// 	// RoutesBD[i].meta = JSON.parse(RoutesBD[i].meta)
-//   RoutesBD[i].meta.layout = layouts[RoutesBD[i].meta.layout]
-// }
 
 const router = new Router({
   mode: 'history',

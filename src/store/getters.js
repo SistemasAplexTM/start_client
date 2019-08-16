@@ -7,6 +7,7 @@ const getters = {
 	 roundedCorners: state => state.app.layout.roundedCorners,
 	 viewAnimation: state => state.app.layout.viewAnimation,
 	 isLogged: state => state.app.logged,
-	 splashScreen: state => state.app.splashScreen
+	 splashScreen: state => state.app.splashScreen,
+	 rightMenu: state => state.app.rightMenu
 }
 export default getters

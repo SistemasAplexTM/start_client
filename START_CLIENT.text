@@ -4,7 +4,7 @@ Caracteristicas:
 1. Integración con i18n para traducción en archivos independientes por idioma
 2. Sistema personalizado de redirección según el rol del usuario
 3. Sistema de permisos basado en la directiva personalizada v-can
-4.
+4. Editar perfil en barra rightMenu
 
 
 Pendiente:
@@ -12,9 +12,13 @@ Pendiente:
 2. Registro de usuario
 3. Formulario de roles y permisos
 4. Menú en la BD
-5. Barra lateral ¡IMPORTANTE! (spa tipo cell dentro de la barra)
+5. Barra lateral ¡IMPORTANTE! (spa tipo cell dentro de la barra) usando vuex
 6. Notificaciones
 7. Idiomas en la BD
+8. Usar Skeleton
+9. Usar imagen vacía en caso de error al cargar alguna foto
+10. Libreria para manejar LOG
+11. Posición de footer en rightMenu
 
 
 SERVIDOR
