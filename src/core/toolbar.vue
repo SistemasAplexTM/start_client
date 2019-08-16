@@ -9,7 +9,7 @@
 
 			<!-- Buscador global disponible -->
 			<!-- <search class="hidden-xs-only"></search> -->
-			
+
 		</div>
 		<div class="box-right flex align-center pl-10">
 			<el-dropdown trigger="click" @command="onCommandLang">
@@ -38,7 +38,7 @@
 					<img src="../assets/images/avatar.jpg" class="avatar" alt="avatar">
 				</span>
 				<el-dropdown-menu slot="dropdown">
-					<el-dropdown-item command="/profile"><i class="fal fa-user mr-10"></i> {{ $t('profile') }}</el-dropdown-item>
+					<el-dropdown-item command="profile"><i class="fal fa-user mr-10"></i> {{ $t('profile') }}</el-dropdown-item>
 					<el-dropdown-item command="/logout" divided><i class="fal fa-sign-out mr-10"></i> {{ $t('logout') }}</el-dropdown-item>
 				</el-dropdown-menu>
 			</el-dropdown>
@@ -74,6 +74,10 @@ export default {
 			}
     },
     onCommand (path) {
+			if (path == 'profile') {
+				this.$store.commit('openRightMenu', {active: true, component: path, title: this.$t('profile'), icon: 'user'})
+				return false
+			}
       this.$router.push(path)
     },
     toggleSidebar () {

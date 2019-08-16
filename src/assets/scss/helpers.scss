@@ -1,6 +1,18 @@
 //@import '_variables';
 //@import "~element-ui/packages/theme-chalk/src/common/var";
 
+// Aplex
+.fr {
+  float: right;
+}
+
+// width / Width helpers
+
+@for $i from 0 through 200 {
+    //padding
+    .width-#{$i}, .w-#{$i} { width: #{($i) + '%'}; }
+}
+
 
 // Div scrollable
 .scrollable {
@@ -23,17 +35,17 @@
         &::-webkit-scrollbar {
             width: 5px;
             height: 5px;
-        } 
+        }
         &::-webkit-scrollbar-thumb, &::-webkit-scrollbar-track {
             background: transparent;
             border-radius: 5px;
-        }      
+        }
         &::-webkit-scrollbar-thumb {
             background: transparentize($text-color, 0.95);
         }
         &:hover::-webkit-scrollbar-thumb {
             background: transparentize($text-color, 0.85);
-            
+
             &:hover {
                 background: transparentize($text-color, 0.75);
             }

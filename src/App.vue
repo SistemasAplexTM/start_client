@@ -15,6 +15,8 @@
 			</div>
 		</transition>
 
+		<right-menu/>
+
 		<vertical-nav
 			:position="navPos"
 			:collapse-nav="collapseNav"
@@ -22,6 +24,8 @@
 			@collapse-nav-toggle="collapseNav = !collapseNav"
 			@push-page="closeSidebar"
 			v-if="navPos === 'left'"/>
+
+
 
 		<div class="container flex column box grow">
 
@@ -70,6 +74,7 @@ import VerticalNav from '@/core/vertical-nav.vue'
 import Toolbar from '@/core/toolbar.vue'
 import Footer from '@/core/footer.vue'
 import LayoutPicker from '@/components/layout-picker.vue'
+import RightMenu from '@/components/custom/RightMenu.vue'
 const browser = detect()
 
 export default {
@@ -78,7 +83,7 @@ export default {
     return {
       collapseNav: false,
       openSidebar: false,
-      innerWidth: 0
+      innerWidth: 0,
     }
   },
   computed: {
@@ -119,14 +124,15 @@ export default {
     },
     closeSidebar () {
       this.openSidebar = false
-    }
+    },
   },
   components: {
     HorizontalNav,
     VerticalNav,
     Toolbar,
     Footer,
-    LayoutPicker
+    LayoutPicker,
+		RightMenu
   },
   created () {
     if (browser.name) { document.getElementsByTagName('html')[0].classList.add(browser.name) }

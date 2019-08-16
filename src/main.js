@@ -22,6 +22,7 @@ import VueResize from 'vue-resize'
 import 'vue-resize/dist/vue-resize.css'
 // import VuePerfectScrollbar from 'vue-perfect-scrollbar'
 import 'flag-icon-css/css/flag-icon.css'
+import VueSkeletonLoading from 'vue-skeleton-loading'
 
 /* ═ ═ ═ ═ ═ ═ ═ ═ ═ *\
 |     CORE ASSETS     |
@@ -46,6 +47,7 @@ Vue.config.productionTip = false
 Vue.use(VueResize)
 Vue.use(Fullscreen)
 Vue.use(VueI18n)
+Vue.use(VueSkeletonLoading)
 
 /* ═ ═ ═ ═ ═ ═ ═ ═ *\
 |  CORE COMPONENTS  |

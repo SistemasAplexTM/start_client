@@ -2,6 +2,29 @@
   "logout": "Logout",
   "login": "Login",
   "profile": "Profile",
+  "activity": "Activity",
+  "Info": "Information",
+  "success": {
+    "update": "successfully updated",
+    "save": "Saved successfully",
+    "delete": "successfully removed"
+  },
+  "errors": {
+    "update": "Update failed",
+    "save": "Save failed",
+    "delete": "Error deleting"
+  },
+  "global": {
+    "cancel": "Cancel",
+    "acept": "Acept",
+    "save": "Save",
+    "update": "Update",
+    "delete": "Delete"
+  },
+  "user": {
+    "name": "Name",
+    "email": "Email"
+  },
 	"message": {
 		"hello": "Hello world"
 	},
